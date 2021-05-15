@@ -1,0 +1,37 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# importbio
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Import common bioinformatic file formats into R as tibbles.
+
+## Installation
+
+You can install importbio using the `remotes` package.
+
+``` r
+install.packages("remotes")
+remotes::install_github('davetang/importbio')
+```
+
+## Example
+
+```{r example}
+library(importbio)
+importvcf(system.file("extdata", "Pfeiffer.vcf.gz", package = "importbio"))
+```
