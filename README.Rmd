@@ -5,6 +5,7 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
+library(importbio)
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -18,7 +19,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Import common bioinformatic file formats into R as tibbles.
+A package for importing common bioinformatic file formats into R as [tibbles](https://r4ds.had.co.nz/tibbles.html).
 
 ## Installation
 
@@ -29,9 +30,32 @@ install.packages("remotes")
 remotes::install_github('davetang/importbio')
 ```
 
-## Example
+## Examples
 
-```{r example}
-library(importbio)
+Import a VCF file.
+
+```{r importvcf}
 importvcf(system.file("extdata", "Pfeiffer.vcf.gz", package = "importbio"))
 ```
+
+Import a BED file.
+
+```{r importbed, message=FALSE}
+importbed(system.file("extdata", "refseq.bed.gz", package = "importbio"))
+```
+
+Import a GTF file.
+
+```{r importgtf}
+importgtf(system.file("extdata", "gencode.v38.annotation.sample.gtf.gz", package = "importbio"))
+```
+
+Import a GFF3 file.
+
+```{r importgff}
+importgff(system.file("extdata", "gencode.v38.annotation.sample.gff3.gz", package = "importbio"))
+```
+
+## Contact
+
+Email me at davetang dot org (no spaces).

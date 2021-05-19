@@ -17,4 +17,5 @@ Imports:
     dplyr,
     magrittr,
     readr,
+    tidyr,
     tidyselect
