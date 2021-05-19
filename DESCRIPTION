@@ -1,13 +1,15 @@
 Package: importbio
-Title: What the Package Does (One Line, Title Case)
+Title: Imports commonly used bioinformatics file formats into R as tibbles
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Dave",
+           family = "Tang",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "me@davetang.org",
+           comment = c(ORCID = "0000-0002-4790-9014"))
+Description: Various packages exist for importing bioinformatics file formats into R. This package 
+    provides functions for loading commonly used bioinformatics file formats in R as a unified format
+    (a tibble) that is popular amongst R users who like to work within the Tidyverse.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
