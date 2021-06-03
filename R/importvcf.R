@@ -16,7 +16,7 @@ importvcf <- function(infile){
                                   id = "c",
                                   ref = "c",
                                   alt = "c",
-                                  qual = "d",
+                                  qual = "c",
                                   filter = "c",
                                   info = "c")
 
