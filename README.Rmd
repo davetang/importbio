@@ -56,6 +56,12 @@ Import a GFF3 file.
 importgff(system.file("extdata", "gencode.v38.annotation.sample.gff3.gz", package = "importbio"))
 ```
 
+Import BLAST output.
+
+```{r importblast}
+importblast(system.file("extdata", "blastout.tsv.gz", package = "importbio"))
+```
+
 ## Contact
 
 Email me at davetang dot org (no spaces).
