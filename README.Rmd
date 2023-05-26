@@ -19,7 +19,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-A package for importing common bioinformatic file formats into R as [tibbles](https://r4ds.had.co.nz/tibbles.html).
+A package for importing common bioinformatic file formats into R as
+[tibbles](https://r4ds.had.co.nz/tibbles.html).
 
 ## Installation
 
@@ -60,6 +61,20 @@ Import BLAST output.
 
 ```{r importblast}
 importblast(system.file("extdata", "blastout.tsv.gz", package = "importbio"))
+```
+
+Import NetMHCIIpan output. There will be a warning because NetMHCIIpan contains
+free text at the end of the file; you can ignore this but please run
+`problems()` to double-check.
+
+```{r importnetmhciipan}
+importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
+```
+
+## Session info
+
+```{r session_info, echo = FALSE}
+sessionInfo()
 ```
 
 ## Contact
