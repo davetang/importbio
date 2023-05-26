@@ -2,7 +2,7 @@
 #'
 #' `importnetmhciipan()` reads NetMHCIIpan output (default parameters) and saves the contents in a tibble.
 #'
-#' You will recieve a warning about parsing failures. This is because NetMHCIIpan output contains free text, e.g. Number of strong binders: 3 Number of weak binders: 5. This line is automatically removed but you will still receive a warning.
+#' You will recieve a warning about parsing failures. This is because NetMHCIIpan output contains free text, e.g. "Number of strong binders: 3 Number of weak binders: 5". This line is automatically removed but you will still receive a warning.
 #'
 #' Columns:
 #'
@@ -26,7 +26,7 @@
 #' @import dplyr
 #'
 #' @examples
-#' importblast(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
+#' importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
 importnetmhciipan <- function(infile){
 
   my_colnames <- c(
