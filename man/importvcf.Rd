@@ -13,7 +13,10 @@ importvcf(infile)
 A tibble
 }
 \description{
-Import VCF as tibble
+\code{importvcf()} reads VCF output and saves the contents in a tibble. Note that this function (currently) only saves the genomic information and not the genotype of samples that may be present.
+}
+\details{
+See \href{https://github.com/davetang/learning_vcf_file}{Learning the Variant Call Format} for more information.
 }
 \examples{
 importvcf(system.file("extdata", "Pfeiffer.vcf.gz", package = "importbio"))

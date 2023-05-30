@@ -1,5 +1,9 @@
 #' Import VCF as tibble
 #'
+#' `importvcf()` reads VCF output and saves the contents in a tibble. Note that this function (currently) only saves the genomic information and not the genotype of samples that may be present.
+#'
+#' See [Learning the Variant Call Format](https://github.com/davetang/learning_vcf_file) for more information.
+#'
 #' @param infile VCF to import
 #'
 #' @return A tibble

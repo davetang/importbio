@@ -16,8 +16,6 @@ A tibble
 \code{importnetmhciipan()} reads NetMHCIIpan output (default parameters) and saves the contents in a tibble.
 }
 \details{
-You will recieve a warning about parsing failures. This is because NetMHCIIpan output contains free text, e.g. "Number of strong binders: 3 Number of weak binders: 5". This line is automatically removed but you will still receive a warning.
-
 Columns:
 \itemize{
 \item \code{pos}: Residue number (starting from 1)

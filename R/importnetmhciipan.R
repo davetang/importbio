@@ -2,8 +2,6 @@
 #'
 #' `importnetmhciipan()` reads NetMHCIIpan output (default parameters) and saves the contents in a tibble.
 #'
-#' You will recieve a warning about parsing failures. This is because NetMHCIIpan output contains free text, e.g. "Number of strong binders: 3 Number of weak binders: 5". This line is automatically removed but you will still receive a warning.
-#'
 #' Columns:
 #'
 #' * `pos`: Residue number (starting from 1)
@@ -23,7 +21,6 @@
 #' @return A tibble
 #' @export
 #' @import readr
-#' @import dplyr
 #'
 #' @examples
 #' importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
@@ -57,14 +54,7 @@ importnetmhciipan <- function(infile){
     bind_level = "c"
   )
 
-  start <- min(grep("^\\s+\\d+", readr::read_lines(infile)))
-
-  read_table(
-    file = infile,
-    comment = "-",
-    skip = start - 1,
-    col_names = my_colnames,
-    col_types = as.col_spec(unlist(my_coltypes))
-  ) %>%
-    filter(!is.na(pos))
+  read_lines(infile, n_max = -1L) |>
+    skip_lines(x = _, regex = "^-|^Number|^#|^$|^\\sPos") |>
+    read_table(col_names = my_colnames, col_types = as.col_spec(unlist(my_coltypes)))
 }

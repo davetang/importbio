@@ -63,9 +63,7 @@ Import BLAST output.
 importblast(system.file("extdata", "blastout.tsv.gz", package = "importbio"))
 ```
 
-Import NetMHCIIpan output. There will be a warning because NetMHCIIpan contains
-free text at the end of the file; you can ignore this but please run
-`problems()` to double-check.
+Import NetMHCIIpan output.
 
 ```{r importnetmhciipan}
 importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
