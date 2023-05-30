@@ -132,21 +132,10 @@ importblast(system.file("extdata", "blastout.tsv.gz", package = "importbio"))
 #> # ℹ 3 more variables: s_end <int>, evalue <dbl>, bit_score <dbl>
 ```
 
-Import NetMHCIIpan output. There will be a warning because NetMHCIIpan
-contains free text at the end of the file; you can ignore this but
-please run `problems()` to double-check.
+Import NetMHCIIpan output.
 
 ``` r
 importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
-#> Warning: 6 parsing failures.
-#> row          col               expected   actual                                                                            file
-#>  87 pos          no trailing characters Number   '/tmp/Rtmpgqq6ER/temp_libpath400b1fe3dc11/importbio/extdata/netmhciipan.out.gz'
-#>  87 offset       no trailing characters binders: '/tmp/Rtmpgqq6ER/temp_libpath400b1fe3dc11/importbio/extdata/netmhciipan.out.gz'
-#>  87 core_rel     a double               Number   '/tmp/Rtmpgqq6ER/temp_libpath400b1fe3dc11/importbio/extdata/netmhciipan.out.gz'
-#>  87 score_el     a double               weak     '/tmp/Rtmpgqq6ER/temp_libpath400b1fe3dc11/importbio/extdata/netmhciipan.out.gz'
-#>  87 perc_rank_el a double               binders: '/tmp/Rtmpgqq6ER/temp_libpath400b1fe3dc11/importbio/extdata/netmhciipan.out.gz'
-#> ... ............ ...................... ........ ...............................................................................
-#> See problems(...) for more details.
 #> # A tibble: 86 × 11
 #>      pos mhc       peptide     offset core  core_rel id    score_el perc_rank_el
 #>    <int> <chr>     <chr>        <int> <chr>    <dbl> <chr>    <dbl>        <dbl>
