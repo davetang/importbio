@@ -153,6 +153,27 @@ importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "import
 #> # ℹ 2 more variables: exp_bind <dbl>, bind_level <chr>
 ```
 
+Import bam-readcount output.
+
+``` r
+importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", package = "importbio"))
+#> # A tibble: 2,733 × 11
+#>    chr       pos ref   depth base_equal base_a   base_c   base_g   base_t  
+#>    <chr>   <int> <chr> <int> <list>     <list>   <list>   <list>   <list>  
+#>  1 chr11 5224908 C         9 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  2 chr11 5224909 A         9 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  3 chr11 5224910 G        10 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  4 chr11 5224911 A        10 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  5 chr11 5224912 T        10 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  6 chr11 5224913 T        10 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  7 chr11 5224914 C        10 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  8 chr11 5224915 C        10 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#>  9 chr11 5224916 G        10 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#> 10 chr11 5224917 G        11 <tibble>   <tibble> <tibble> <tibble> <tibble>
+#> # ℹ 2,723 more rows
+#> # ℹ 2 more variables: base_n <list>, base_indel <list>
+```
+
 ## Session info
 
     #> R version 4.3.0 (2023-04-21)

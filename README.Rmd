@@ -69,6 +69,12 @@ Import NetMHCIIpan output.
 importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
 ```
 
+Import bam-readcount output.
+
+```{r importbamreadcount}
+importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", package = "importbio"))
+```
+
 ## Session info
 
 ```{r session_info, echo = FALSE}
