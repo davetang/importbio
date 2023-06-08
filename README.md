@@ -199,7 +199,7 @@ importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", packag
     #> [1] stats     graphics  grDevices utils     datasets  methods   base     
     #> 
     #> other attached packages:
-    #> [1] importbio_0.0.2
+    #> [1] importbio_0.0.3
     #> 
     #> loaded via a namespace (and not attached):
     #>  [1] crayon_1.5.2     vctrs_0.6.2      cli_3.6.1        knitr_1.42      
