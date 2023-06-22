@@ -22,13 +22,22 @@ knitr::opts_chunk$set(
 A package for importing common bioinformatic file formats into R as
 [tibbles](https://r4ds.had.co.nz/tibbles.html).
 
-## Installation
+## Setup
 
-You can install importbio using the `remotes` package.
+You can install and update importbio using the `remotes` package. Use the
+`install_github()` function to install the package.
 
-``` r
+```r
 install.packages("remotes")
 remotes::install_github('davetang/importbio')
+```
+
+Use the `update_packages()` function to update the package. You can check the
+version using the `packageVersion()` base function.
+
+```r
+remotes::update_packages("importbio")
+packageVersion("importbio")
 ```
 
 ## Examples

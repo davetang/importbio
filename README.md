@@ -9,13 +9,22 @@
 A package for importing common bioinformatic file formats into R as
 [tibbles](https://r4ds.had.co.nz/tibbles.html).
 
-## Installation
+## Setup
 
-You can install importbio using the `remotes` package.
+You can install and update importbio using the `remotes` package. Use
+the `install_github()` function to install the package.
 
 ``` r
 install.packages("remotes")
 remotes::install_github('davetang/importbio')
+```
+
+Use the `update_packages()` function to update the package. You can
+check the version using the `packageVersion()` base function.
+
+``` r
+remotes::update_packages("importbio")
+packageVersion("importbio")
 ```
 
 ## Examples
@@ -202,7 +211,7 @@ importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", packag
     #> [1] importbio_0.0.3
     #> 
     #> loaded via a namespace (and not attached):
-    #>  [1] crayon_1.5.2     vctrs_0.6.2      cli_3.6.1        knitr_1.42      
+    #>  [1] crayon_1.5.2     vctrs_0.6.3      cli_3.6.1        knitr_1.42      
     #>  [5] rlang_1.1.1      xfun_0.39        purrr_1.0.1      generics_0.1.3  
     #>  [9] bit_4.0.5        glue_1.6.2       htmltools_0.5.5  hms_1.1.3       
     #> [13] fansi_1.0.4      rmarkdown_2.21   evaluate_0.20    tibble_3.2.1    
