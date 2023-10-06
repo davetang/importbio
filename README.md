@@ -184,6 +184,28 @@ importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "import
 #> # ℹ 2 more variables: exp_bind <dbl>, bind_level <chr>
 ```
 
+Import `mhcflurry-predict` output.
+
+``` r
+importmhcflurry(system.file("extdata", "mhcflurry.pred.csv.gz", package = "importbio"))
+#> # A tibble: 92 × 8
+#>    id    allele     peptide   mhcflurry_affinity mhcflurry_affinity_percentile
+#>    <chr> <chr>      <chr>                  <dbl>                         <dbl>
+#>  1 0     HLA-A02:01 MAEMKTDAA             19262.                         11.1 
+#>  2 1     HLA-A02:01 AEMKTDAAT             23317.                         16.5 
+#>  3 2     HLA-A02:01 EMKTDAATL             11060.                          5.90
+#>  4 3     HLA-A02:01 MKTDAATLA             24356.                         18.5 
+#>  5 4     HLA-A02:01 KTDAATLAQ             21710.                         13.9 
+#>  6 5     HLA-A02:01 TDAATLAQE             24373.                         18.5 
+#>  7 6     HLA-A02:01 DAATLAQEA             17752.                          9.89
+#>  8 7     HLA-A02:01 AATLAQEAG             26679.                         25.4 
+#>  9 8     HLA-A02:01 ATLAQEAGN             27336.                         27.6 
+#> 10 9     HLA-A02:01 TLAQEAGNF             11715.                          6.24
+#> # ℹ 82 more rows
+#> # ℹ 3 more variables: mhcflurry_processing_score <dbl>,
+#> #   mhcflurry_presentation_score <dbl>, mhcflurry_presentation_percentile <dbl>
+```
+
 Import bam-readcount output.
 
 ``` r
@@ -230,7 +252,7 @@ importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", packag
     #> [1] stats     graphics  grDevices utils     datasets  methods   base     
     #> 
     #> other attached packages:
-    #> [1] importbio_0.0.5
+    #> [1] importbio_0.0.6
     #> 
     #> loaded via a namespace (and not attached):
     #>  [1] crayon_1.5.2     vctrs_0.6.3      cli_3.6.1        knitr_1.43      

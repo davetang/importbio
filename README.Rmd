@@ -84,6 +84,12 @@ Import NetMHCIIpan output.
 importnetmhciipan(system.file("extdata", "netmhciipan.out.gz", package = "importbio"))
 ```
 
+Import `mhcflurry-predict` output.
+
+```{r importmhcflurry}
+importmhcflurry(system.file("extdata", "mhcflurry.pred.csv.gz", package = "importbio"))
+```
+
 Import bam-readcount output.
 
 ```{r importbamreadcount}
