@@ -1,13 +1,13 @@
 Package: importbio
 Title: Imports commonly used bioinformatics file formats into R as tibbles
-Version: 0.0.3
-Authors@R: 
+Version: 0.0.5
+Authors@R:
     person(given = "Dave",
            family = "Tang",
            role = c("aut", "cre"),
            email = "me@davetang.org",
            comment = c(ORCID = "0000-0002-4790-9014"))
-Description: Various packages exist for importing bioinformatics file formats into R. This package 
+Description: Various packages exist for importing bioinformatics file formats into R. This package
     provides functions for loading commonly used bioinformatics file formats in R as a unified format
     (a tibble) that is popular amongst R users who like to work within the Tidyverse.
 License: MIT + file LICENSE
@@ -15,7 +15,7 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Imports: 
+Imports:
     dplyr,
     magrittr,
     readr,

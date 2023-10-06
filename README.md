@@ -95,6 +95,28 @@ importgtf(system.file("extdata", "gencode.v38.annotation.sample.gtf.gz", package
 #> #   protein_id <list>
 ```
 
+Import a GTF file but keeping only the gene features.
+
+``` r
+importgtf(system.file("extdata", "gencode.v38.annotation.sample.gtf.gz", package = "importbio"), keep_feature = "gene")
+#> # A tibble: 11 × 15
+#>    seqname source  feature start    end score strand frame gene_id   gene_type
+#>    <fct>   <chr>   <chr>   <int>  <int> <chr> <chr>  <chr> <list>    <list>   
+#>  1 chr1    HAVANA  gene    11869  14409 .     +      .     <chr [1]> <chr [1]>
+#>  2 chr1    HAVANA  gene    14404  29570 .     -      .     <chr [1]> <chr [1]>
+#>  3 chr1    ENSEMBL gene    17369  17436 .     -      .     <chr [1]> <chr [1]>
+#>  4 chr1    HAVANA  gene    29554  31109 .     +      .     <chr [1]> <chr [1]>
+#>  5 chr1    ENSEMBL gene    30366  30503 .     +      .     <chr [1]> <chr [1]>
+#>  6 chr1    HAVANA  gene    34554  36081 .     -      .     <chr [1]> <chr [1]>
+#>  7 chr1    HAVANA  gene    52473  53312 .     +      .     <chr [1]> <chr [1]>
+#>  8 chr1    HAVANA  gene    57598  64116 .     +      .     <chr [1]> <chr [1]>
+#>  9 chr1    HAVANA  gene    65419  71585 .     +      .     <chr [1]> <chr [1]>
+#> 10 chr1    HAVANA  gene    89295 133723 .     -      .     <chr [1]> <chr [1]>
+#> 11 chr1    HAVANA  gene    89551  91105 .     -      .     <chr [1]> <chr [1]>
+#> # ℹ 5 more variables: gene_name <list>, level <list>, hgnc_id <list>,
+#> #   havana_gene <list>, tag <list>
+```
+
 Import a GFF3 file.
 
 ``` r
@@ -208,13 +230,13 @@ importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", packag
     #> [1] stats     graphics  grDevices utils     datasets  methods   base     
     #> 
     #> other attached packages:
-    #> [1] importbio_0.0.3
+    #> [1] importbio_0.0.5
     #> 
     #> loaded via a namespace (and not attached):
-    #>  [1] crayon_1.5.2     vctrs_0.6.3      cli_3.6.1        knitr_1.42      
+    #>  [1] crayon_1.5.2     vctrs_0.6.3      cli_3.6.1        knitr_1.43      
     #>  [5] rlang_1.1.1      xfun_0.39        purrr_1.0.1      generics_0.1.3  
     #>  [9] bit_4.0.5        glue_1.6.2       htmltools_0.5.5  hms_1.1.3       
-    #> [13] fansi_1.0.4      rmarkdown_2.21   evaluate_0.20    tibble_3.2.1    
+    #> [13] fansi_1.0.4      rmarkdown_2.22   evaluate_0.21    tibble_3.2.1    
     #> [17] tzdb_0.4.0       fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
     #> [21] compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3  tidyr_1.3.0     
     #> [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         readr_2.1.4     

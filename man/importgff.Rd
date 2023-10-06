@@ -4,12 +4,14 @@
 \alias{importgff}
 \title{Import GFF as a tibble}
 \usage{
-importgff(infile, sep = "=")
+importgff(infile, sep = "=", ...)
 }
 \arguments{
 \item{infile}{GFF file to import}
 
 \item{sep}{separator for group field}
+
+\item{...}{parameters to pass to importgftf}
 }
 \value{
 A tibble

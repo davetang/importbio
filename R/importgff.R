@@ -16,6 +16,7 @@
 #'
 #' @param infile GFF file to import
 #' @param sep separator for group field
+#' @param ... parameters to pass to importgftf
 #'
 #' @return A tibble
 #' @export
@@ -25,40 +26,6 @@
 #'
 #' @examples
 #' importgff(system.file("extdata", "gencode.v38.annotation.sample.gff3.gz", package = "importbio"))
-importgff <- function(infile, sep = "="){
-  my_colnames <- c(
-    "seqname",
-    "source",
-    "feature",
-    "start",
-    "end",
-    "score",
-    "strand",
-    "frame",
-    "group"
-  )
-  my_coltypes <- readr::cols_only(
-    seqname = "f",
-    source = "c",
-    feature = "c",
-    start = "i",
-    end = "i",
-    score = "c",
-    strand = "c",
-    frame = "c",
-    group = "c"
-  )
-
-  readr::read_tsv(
-    file = infile,
-    col_names = my_colnames,
-    col_types = my_coltypes,
-    comment = "#"
-  ) %>%
-    mutate(group = sub(pattern = ";$", replacement = "", x = .data$group)) %>%
-    separate_rows(.data$group, sep = ";\\s*") %>%
-    separate(.data$group, c('key', 'value'), sep = sep) %>%
-    mutate(value = gsub(pattern = "\"", replacement = "", x = .data$value)) %>%
-    distinct() %>%
-    pivot_wider(id_cols = my_colnames[1:8], names_from = .data$key, values_from = .data$value, values_fn = list)
+importgff <- function(infile, sep = "=", ...){
+   importgftf(infile, sep, ...)
 }

@@ -60,6 +60,12 @@ Import a GTF file.
 importgtf(system.file("extdata", "gencode.v38.annotation.sample.gtf.gz", package = "importbio"))
 ```
 
+Import a GTF file but keeping only the gene features.
+
+```{r importgtf_gene}
+importgtf(system.file("extdata", "gencode.v38.annotation.sample.gtf.gz", package = "importbio"), keep_feature = "gene")
+```
+
 Import a GFF3 file.
 
 ```{r importgff}
