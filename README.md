@@ -33,19 +33,19 @@ Import a VCF file.
 
 ``` r
 importvcf(system.file("extdata", "Pfeiffer.vcf.gz", package = "importbio"))
-#> # A tibble: 101 × 10
-#>    vid              chrom    pos id         ref   alt   qual  filter info  type 
-#>    <chr>            <fct>  <int> <chr>      <chr> <chr> <chr> <chr>  <chr> <chr>
-#>  1 1_866511_C_CCCCT 1     866511 rs60722469 C     CCCCT 258.… PASS   AC=2… ins  
-#>  2 1_879317_C_T     1     879317 rs7523549  C     T     150.… PASS   AC=1… snv  
-#>  3 1_879482_G_C     1     879482 .          G     C     484.… PASS   AC=1… snv  
-#>  4 1_880390_C_A     1     880390 rs3748593  C     A     288.… PASS   AC=1… snv  
-#>  5 1_881627_G_A     1     881627 rs2272757  G     A     486.… PASS   AC=1… snv  
-#>  6 1_884091_C_G     1     884091 rs7522415  C     G     65.46 PASS   AC=1… snv  
-#>  7 1_884101_A_C     1     884101 rs4970455  A     C     85.81 PASS   AC=1… snv  
-#>  8 1_892460_G_C     1     892460 rs41285802 G     C     1736… PASS   AC=1… snv  
-#>  9 1_897730_C_T     1     897730 rs7549631  C     T     225.… PASS   AC=1… snv  
-#> 10 1_909238_G_C     1     909238 rs3829740  G     C     247.… PASS   AC=1… snv  
+#> # A tibble: 101 × 12
+#>    vid     CHROM    POS ID    REF   ALT   QUAL  FILTER INFO  FORMAT manuel type 
+#>    <chr>   <fct>  <int> <chr> <chr> <chr> <chr> <chr>  <chr> <chr>  <chr>  <fct>
+#>  1 1_8665… 1     866511 rs60… C     CCCCT 258.… PASS   AC=2… GT:AD… 1/1:6… ins  
+#>  2 1_8793… 1     879317 rs75… C     T     150.… PASS   AC=1… GT:AD… 0/1:1… snv  
+#>  3 1_8794… 1     879482 .     G     C     484.… PASS   AC=1… GT:AD… 0/1:2… snv  
+#>  4 1_8803… 1     880390 rs37… C     A     288.… PASS   AC=1… GT:AD… 0/1:1… snv  
+#>  5 1_8816… 1     881627 rs22… G     A     486.… PASS   AC=1… GT:AD… 0/1:1… snv  
+#>  6 1_8840… 1     884091 rs75… C     G     65.46 PASS   AC=1… GT:AD… 0/1:6… snv  
+#>  7 1_8841… 1     884101 rs49… A     C     85.81 PASS   AC=1… GT:AD… 0/1:6… snv  
+#>  8 1_8924… 1     892460 rs41… G     C     1736… PASS   AC=1… GT:AD… 0/1:8… snv  
+#>  9 1_8977… 1     897730 rs75… C     T     225.… PASS   AC=1… GT:AD… 0/1:1… snv  
+#> 10 1_9092… 1     909238 rs38… G     C     247.… PASS   AC=1… GT:AD… 0/1:9… snv  
 #> # ℹ 91 more rows
 ```
 
@@ -252,7 +252,7 @@ importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", packag
     #> [1] stats     graphics  grDevices utils     datasets  methods   base     
     #> 
     #> other attached packages:
-    #> [1] importbio_0.0.6
+    #> [1] importbio_0.0.7
     #> 
     #> loaded via a namespace (and not attached):
     #>  [1] crayon_1.5.2      vctrs_0.6.5       cli_3.6.2         knitr_1.45       

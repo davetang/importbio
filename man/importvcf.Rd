@@ -4,18 +4,16 @@
 \alias{importvcf}
 \title{Import VCF as tibble}
 \usage{
-importvcf(infile, skip_info = FALSE)
+importvcf(infile)
 }
 \arguments{
 \item{infile}{VCF to import}
-
-\item{skip_info}{Boolean for whether to store the INFO column}
 }
 \value{
 A tibble
 }
 \description{
-\code{importvcf()} reads VCF output and saves the contents in a tibble. Note that this function (currently) only saves the genomic information and not the genotype of samples that may be present.
+\code{importvcf()} reads VCF output and saves the contents in a tibble.
 }
 \details{
 See \href{https://github.com/davetang/learning_vcf_file}{Learning the Variant Call Format} for more information.

@@ -1,6 +1,6 @@
 Package: importbio
 Title: Imports commonly used bioinformatics file formats into R as tibbles
-Version: 0.0.7
+Version: 0.1.0
 Authors@R:
     person(given = "Dave",
            family = "Tang",
