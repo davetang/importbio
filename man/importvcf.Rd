@@ -4,10 +4,12 @@
 \alias{importvcf}
 \title{Import VCF as tibble}
 \usage{
-importvcf(infile)
+importvcf(infile, skip_info = FALSE)
 }
 \arguments{
 \item{infile}{VCF to import}
+
+\item{skip_info}{Boolean for whether to store the INFO column}
 }
 \value{
 A tibble

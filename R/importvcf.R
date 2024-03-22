@@ -5,6 +5,7 @@
 #' See [Learning the Variant Call Format](https://github.com/davetang/learning_vcf_file) for more information.
 #'
 #' @param infile VCF to import
+#' @param skip_info Boolean for whether to store the INFO column
 #'
 #' @return A tibble
 #' @export
@@ -13,16 +14,23 @@
 #'
 #' @examples
 #' importvcf(system.file("extdata", "Pfeiffer.vcf.gz", package = "importbio"))
-importvcf <- function(infile){
-  my_colnames <- c("chrom", "pos", "id", "ref", "alt", "qual", "filter", "info")
-  my_coltypes <- readr::cols_only(chrom = "f",
-                                  pos = "i",
-                                  id = "c",
-                                  ref = "c",
-                                  alt = "c",
-                                  qual = "c",
-                                  filter = "c",
-                                  info = "c")
+importvcf <- function(infile, skip_info=FALSE){
+  my_colnames <- c("chrom", "pos", "id", "ref", "alt", "qual", "filter")
+  my_coltypes <- readr::cols_only(
+    chrom = "f",
+    pos = "i",
+    id = "c",
+    ref = "c",
+    alt = "c",
+    qual = "c",
+    filter = "c"
+  )
+
+  if(skip_info == FALSE){
+    my_colnames <- c(my_colnames, 'info')
+    my_colinfo <- readr::cols_only(info = "c")
+    my_coltypes <- c(my_coltypes$cols, my_colinfo$cols)
+  }
 
   readr::read_tsv(
     file = infile,

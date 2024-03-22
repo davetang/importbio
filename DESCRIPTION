@@ -1,6 +1,6 @@
 Package: importbio
 Title: Imports commonly used bioinformatics file formats into R as tibbles
-Version: 0.0.6
+Version: 0.0.7
 Authors@R:
     person(given = "Dave",
            family = "Tang",
@@ -14,7 +14,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Imports:
     dplyr,
     magrittr,
