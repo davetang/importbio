@@ -4,6 +4,7 @@
 # importbio
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 A package for importing common bioinformatic file formats into R as
@@ -227,15 +228,38 @@ importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", packag
 #> # ℹ 2 more variables: base_n <list>, base_indel <list>
 ```
 
+Import a GAF file.
+
+``` r
+importgaf(system.file("extdata", "GCF_043380555.1-RS_2024_12_gene_ontology.gaf.gz", package = "importbio"))
+#> # A tibble: 91 × 17
+#>    DB    DB_Object_ID DB_Object_Symbol Relation GO_ID DB_Reference Evidence_Code
+#>    <chr> <chr>        <chr>            <chr>    <chr> <chr>        <chr>        
+#>  1 NCBI… 107372317    psd2             enables  GO:0… PMID:223010… IEA          
+#>  2 NCBI… 107372317    psd2             enables  GO:0… PMID:223010… IEA          
+#>  3 NCBI… 107372317    psd2             enables  GO:0… PMID:223010… IEA          
+#>  4 NCBI… 107372317    psd2             involve… GO:0… PMID:223010… IEA          
+#>  5 NCBI… 107372319    cnn2             involve… GO:0… PMID:300322… IEA          
+#>  6 NCBI… 107372319    cnn2             located… GO:0… PMID:300322… IEA          
+#>  7 NCBI… 107372319    cnn2             involve… GO:0… PMID:223010… IEA          
+#>  8 NCBI… 107372319    cnn2             enables  GO:0… PMID:300322… IEA          
+#>  9 NCBI… 107372320    gadd45aa         located… GO:0… PMID:300322… IEA          
+#> 10 NCBI… 107372320    gadd45aa         located… GO:0… PMID:300322… IEA          
+#> # ℹ 81 more rows
+#> # ℹ 10 more variables: With_From <chr>, Aspect <chr>, DB_Object_Name <chr>,
+#> #   DB_Object_Synonym <chr>, DB_Object_Type <chr>, Taxon <chr>, Date <chr>,
+#> #   Assigned_By <chr>, Annotation_Extension <chr>, Gene_Product_Form_ID <chr>
+```
+
 ## Session info
 
-    #> R version 4.3.3 (2024-02-29)
-    #> Platform: x86_64-pc-linux-gnu (64-bit)
-    #> Running under: Ubuntu 22.04.4 LTS
+    #> R version 4.5.0 (2025-04-11)
+    #> Platform: x86_64-pc-linux-gnu
+    #> Running under: Ubuntu 24.04.2 LTS
     #> 
     #> Matrix products: default
     #> BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
-    #> LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
+    #> LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0
     #> 
     #> locale:
     #>  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
@@ -252,19 +276,18 @@ importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", packag
     #> [1] stats     graphics  grDevices utils     datasets  methods   base     
     #> 
     #> other attached packages:
-    #> [1] importbio_0.0.7
+    #> [1] importbio_0.1.0
     #> 
     #> loaded via a namespace (and not attached):
-    #>  [1] crayon_1.5.2      vctrs_0.6.5       cli_3.6.2         knitr_1.45       
-    #>  [5] rlang_1.1.3       xfun_0.42         purrr_1.0.2       generics_0.1.3   
-    #>  [9] bit_4.0.5         glue_1.7.0        htmltools_0.5.7   hms_1.1.3        
-    #> [13] fansi_1.0.6       rmarkdown_2.26    evaluate_0.23     tibble_3.2.1     
-    #> [17] tzdb_0.4.0        fastmap_1.1.1     yaml_2.3.8        lifecycle_1.0.4  
-    #> [21] compiler_4.3.3    dplyr_1.1.4       pkgconfig_2.0.3   tidyr_1.3.1      
-    #> [25] rstudioapi_0.15.0 digest_0.6.35     R6_2.5.1          readr_2.1.5      
-    #> [29] tidyselect_1.2.1  utf8_1.2.4        parallel_4.3.3    vroom_1.6.5      
-    #> [33] pillar_1.9.0      magrittr_2.0.3    withr_3.0.0       bit64_4.0.5      
-    #> [37] tools_4.3.3
+    #>  [1] crayon_1.5.3      vctrs_0.6.5       cli_3.6.5         knitr_1.50       
+    #>  [5] rlang_1.1.6       xfun_0.52         purrr_1.0.4       generics_0.1.3   
+    #>  [9] bit_4.6.0         glue_1.8.0        htmltools_0.5.8.1 hms_1.1.3        
+    #> [13] rmarkdown_2.29    evaluate_1.0.3    tibble_3.2.1      tzdb_0.5.0       
+    #> [17] fastmap_1.2.0     yaml_2.3.10       lifecycle_1.0.4   compiler_4.5.0   
+    #> [21] dplyr_1.1.4       pkgconfig_2.0.3   tidyr_1.3.1       rstudioapi_0.17.1
+    #> [25] digest_0.6.37     R6_2.6.1          utf8_1.2.5        readr_2.1.5      
+    #> [29] tidyselect_1.2.1  parallel_4.5.0    vroom_1.6.5       pillar_1.10.2    
+    #> [33] magrittr_2.0.3    withr_3.0.2       bit64_4.6.0-1     tools_4.5.0
 
 ## Contact
 

@@ -96,6 +96,12 @@ Import bam-readcount output.
 importbamreadcount(system.file("extdata", "hg38.bwa.bamreadcount.tsv.gz", package = "importbio"))
 ```
 
+Import a GAF file.
+
+```{r importgaf}
+importgaf(system.file("extdata", "GCF_043380555.1-RS_2024_12_gene_ontology.gaf.gz", package = "importbio"))
+```
+
 ## Session info
 
 ```{r session_info, echo = FALSE}

@@ -3,6 +3,7 @@
 export(importbamreadcount)
 export(importbed)
 export(importblast)
+export(importgaf)
 export(importgff)
 export(importgftf)
 export(importgtf)
